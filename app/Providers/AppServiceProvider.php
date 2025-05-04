@@ -36,6 +36,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        try{
         $info = Decoration::find(1);
         $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
         $genre = Genre::orderBy('position', 'ASC')->where('status', 1)->get();
@@ -86,7 +87,8 @@ class AppServiceProvider extends ServiceProvider
                 $view->with('notifications', $notifications);
             }
         });
-
+    }
+    catch(\Exception $e){}
       
 
     }
