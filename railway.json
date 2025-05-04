@@ -8,7 +8,8 @@
       "DB_DATABASE": "webphim",
       "DB_USERNAME": "root",
       "DB_PASSWORD": ""
-    }
+    },
+    "phpVersion": "8.1"
   },
   "deploy": {
     "startCommand": "php artisan serve --host=0.0.0.0 --port=$PORT"
